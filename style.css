@@ -1,0 +1,35 @@
+/* Custom Styles for Expense Tracker */
+
+/* 1. Custom Scrollbar Styling (Makes the history list look cleaner) */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 2. Specific Color Definitions (for income/expense text) */
+.income-text {
+    color: #10B981; /* Tailwind green-500 */
+}
+
+.expense-text {
+    color: #EF4444; /* Tailwind red-500 */
+}
+
+/* 3. Delete Button Focus Style */
+.delete-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.5); /* Red shadow on focus */
+}
