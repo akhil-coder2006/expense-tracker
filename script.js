@@ -1,4 +1,6 @@
+// === 1. GLOBAL VARIABLES AND SETUP ===
 
+// Array to hold all transaction objects. This is the source of truth for the app.
 let transactions = [];
 
 // Get DOM elements for display and input
@@ -11,8 +13,14 @@ const descriptionInput = document.getElementById('description');
 const amountInput = document.getElementById('amount');
 const messageBox = document.getElementById('message-box');
 
+// === 2. LOCAL STORAGE FUNCTIONS ===
 
+/**
+ * Loads transactions from the browser's localStorage.
+ * If data exists, it parses the JSON string back into the 'transactions' array.
+ */
 function loadTransactions() {
+    // Get the item named 'expenseTrackerTransactions' from localStorage
     const savedTransactions = localStorage.getItem('expenseTrackerTransactions');
 
     // If data exists, parse it. Otherwise, 'transactions' remains an empty array.
@@ -44,7 +52,7 @@ function saveTransactions() {
  * @returns {string} - The formatted currency string.
  */
 function formatCurrency(num) {
-    // Change locale to 'en-IN' (English, India) and currency to 'INR' (Indian Rupee)
+    // MODIFIED: Changed locale to 'en-IN' and currency to 'INR' for Indian Rupee formatting.
     return new Intl.NumberFormat('en-IN', {
         style: 'currency',
         currency: 'INR',
