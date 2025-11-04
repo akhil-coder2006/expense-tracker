@@ -44,10 +44,10 @@ function saveTransactions() {
  * @returns {string} - The formatted currency string.
  */
 function formatCurrency(num) {
-    // Use Intl.NumberFormat for standard currency formatting (USD)
-    return new Intl.NumberFormat('en-US', {
+    // Change locale to 'en-IN' (English, India) and currency to 'INR' (Indian Rupee)
+    return new Intl.NumberFormat('en-IN', {
         style: 'currency',
-        currency: 'USD',
+        currency: 'INR',
     }).format(num);
 }
 
